@@ -1,0 +1,9 @@
+c:\users\jason\documents\visual studio 2015\Projects\RockPaperScissorsLizardSpock\RockPaperScissorsLizardSpock\bin\Debug\RockPaperScissorsLizardSpock.exe.config
+c:\users\jason\documents\visual studio 2015\Projects\RockPaperScissorsLizardSpock\RockPaperScissorsLizardSpock\bin\Debug\RockPaperScissorsLizardSpock.exe
+c:\users\jason\documents\visual studio 2015\Projects\RockPaperScissorsLizardSpock\RockPaperScissorsLizardSpock\bin\Debug\RockPaperScissorsLizardSpock.pdb
+c:\users\jason\documents\visual studio 2015\Projects\RockPaperScissorsLizardSpock\RockPaperScissorsLizardSpock\obj\Debug\RockPaperScissorsLizardSpock.csprojResolveAssemblyReference.cache
+c:\users\jason\documents\visual studio 2015\Projects\RockPaperScissorsLizardSpock\RockPaperScissorsLizardSpock\obj\Debug\RockPaperScissorsLizardSpock.exe
+c:\users\jason\documents\visual studio 2015\Projects\RockPaperScissorsLizardSpock\RockPaperScissorsLizardSpock\obj\Debug\RockPaperScissorsLizardSpock.pdb
+C:\Users\Jason\Documents\Visual Studio 2015\Projects\RockPaperScissorsLizardSpock\RockPaperScissorsLizardSpock\obj\Debug\RockPaperScissorsLizardSpock.Form1.resources
+C:\Users\Jason\Documents\Visual Studio 2015\Projects\RockPaperScissorsLizardSpock\RockPaperScissorsLizardSpock\obj\Debug\RockPaperScissorsLizardSpock.csproj.GenerateResource.Cache
+C:\Users\Jason\Documents\Visual Studio 2015\Projects\RockPaperScissorsLizardSpock\RockPaperScissorsLizardSpock\obj\Debug\RockPaperScissorsLizardSpock.Properties.Resources.resources
