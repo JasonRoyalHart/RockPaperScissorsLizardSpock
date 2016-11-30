@@ -220,6 +220,11 @@ namespace RockPaperScissorsLizardSpock
                 playerTwo.name = Console.ReadLine();
             }
         }
+
+        public void DisplayCompetitors()
+        {
+            Console.WriteLine("Its {0} versus {1}!", player.name, playerTwo.name);
+        }
         public void Play()
         {
             GameStart();
@@ -227,7 +232,7 @@ namespace RockPaperScissorsLizardSpock
             player.playAgain = true;
             while (player.playAgain)
             {
-                Console.WriteLine("Its {0} versus {1}!", player.name, playerTwo.name);
+                DisplayCompetitors();
                 player.getChoice();
                 playerTwo.getChoice();
                 CompareChoices();
