@@ -24,6 +24,11 @@ namespace RockPaperScissorsLizardSpock
 
         }
 
+        public void AdjustScore(int adjust)
+        {
+            score += adjust;
+        }
+
 
         
     }

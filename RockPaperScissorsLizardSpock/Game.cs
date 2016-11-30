@@ -12,7 +12,7 @@ namespace RockPaperScissorsLizardSpock
         public bool gameOver;
         public Player player;
         public Player playerTwo;
-        public void gameStart()
+        public void GameStart()
         {
             Console.WriteLine("Welcome to Rock, Paper, Scissors, Lizard, Spock");
             Console.WriteLine("Play will be to best of three.");
@@ -45,10 +45,27 @@ namespace RockPaperScissorsLizardSpock
                 }
             }
         }
+        public void AdjustScores() {
+            if (player.won == "yes")
+            {
+                player.AdjustScore(1);
+            }
+            else if (playerTwo.won == "yes")
+            {
+                playerTwo.AdjustScore(1);
+            }
+        }
 
+        public void DisplayScores()
+        {
+            Console.WriteLine("{0} score: {1}. {2} score: {3}", player.name, player.score, playerTwo.name, playerTwo.score);
+        }
+        public void SetWinnerAndLoser(string playerWon, string playerTwoWon) {
+            player.won = playerWon;
+            playerTwo.won = playerTwoWon;
+        }
 
-
-        public void compareChoices()
+        public void CompareChoices()
         {
             switch (player.choice)
             {
@@ -58,28 +75,23 @@ namespace RockPaperScissorsLizardSpock
                         {
                             case "paper":
                                 Console.WriteLine("Paper covers rock.");
-                                player.won = "no";
-                                playerTwo.won = "yes";
+                                SetWinnerAndLoser("no", "yes");
                                 break;
                             case "rock":
                                 Console.WriteLine("Rock clashes with rock.");
-                                player.won = "tie";
-                                playerTwo.won = "tie";
+                                SetWinnerAndLoser("tie", "tie");
                                 break;
                             case "scissors":
                                 Console.WriteLine("Rock breaks scissors.");
-                                player.won = "yes";
-                                playerTwo.won = "no";
+                                SetWinnerAndLoser("yes", "no");
                                 break;
                             case "lizard":
                                 Console.WriteLine("Rock crushes lizard.");
-                                player.won = "yes";
-                                playerTwo.won = "no";
+                                SetWinnerAndLoser("yes", "no");
                                 break;
                             case "spock":
                                 Console.WriteLine("Spock vaporizes rock.");
-                                player.won = "no";
-                                playerTwo.won = "yes";
+                                SetWinnerAndLoser("no", "yes");
                                 break;
                         }
                         break;
@@ -90,28 +102,23 @@ namespace RockPaperScissorsLizardSpock
                         {
                             case "paper":
                                 Console.WriteLine("Paper clashes with paper.");
-                                player.won = "tie";
-                                playerTwo.won = "tie";
+                                SetWinnerAndLoser("tie", "tie");
                                 break;
                             case "rock":
                                 Console.WriteLine("Paper covers rock.");
-                                player.won = "yes";
-                                playerTwo.won = "no";
+                                SetWinnerAndLoser("yes", "no");
                                 break;
                             case "scissors":
                                 Console.WriteLine("Scissors cuts paper.");
-                                player.won = "no";
-                                playerTwo.won = "yes";
+                                SetWinnerAndLoser("no", "yes");
                                 break;
                             case "lizard":
                                 Console.WriteLine("Lizard eats paper.");
-                                player.won = "no";
-                                playerTwo.won = "yes";
+                                SetWinnerAndLoser("no", "yes");
                                 break;
                             case "spock":
                                 Console.WriteLine("Spock is disproven by paper.");
-                                player.won = "yes";
-                                playerTwo.won = "no";
+                                SetWinnerAndLoser("yes", "no");
                                 break;
                         }
                         break;
@@ -122,28 +129,23 @@ namespace RockPaperScissorsLizardSpock
                         {
                             case "paper":
                                 Console.WriteLine("Scissors cuts paper.");
-                                player.won = "yes";
-                                playerTwo.won = "no";
+                                SetWinnerAndLoser("yes", "no");
                                 break;
                             case "rock":
                                 Console.WriteLine("Rock crushes scissors.");
-                                player.won = "no";
-                                playerTwo.won = "yes";
+                                SetWinnerAndLoser("no", "yes");
                                 break;
                             case "scissors":
                                 Console.WriteLine("Scissors clashes with scissors.");
-                                player.won = "tie";
-                                playerTwo.won = "tie";
+                                SetWinnerAndLoser("tie", "tie");
                                 break;
                             case "lizard":
                                 Console.WriteLine("Scissors decapitates lizard.");
-                                player.won = "yes";
-                                playerTwo.won = "no";
+                                SetWinnerAndLoser("yes", "no");
                                 break;
                             case "spock":
                                 Console.WriteLine("Spock smashes scissors.");
-                                player.won = "no";
-                                playerTwo.won = "yes";
+                                SetWinnerAndLoser("no", "yes");
                                 break;
                         }
                         break;
@@ -154,28 +156,23 @@ namespace RockPaperScissorsLizardSpock
                         {
                             case "paper":
                                 Console.WriteLine("Lizard eats paper.");
-                                player.won = "yes";
-                                playerTwo.won = "no";
+                                SetWinnerAndLoser("yes", "no");
                                 break;
                             case "rock":
                                 Console.WriteLine("Rock crushes lizard.");
-                                player.won = "no";
-                                playerTwo.won = "yes";
+                                SetWinnerAndLoser("no", "yes");
                                 break;
                             case "scissors":
                                 Console.WriteLine("Scissors decapitates lizard.");
-                                player.won = "no";
-                                playerTwo.won = "yes";
+                                SetWinnerAndLoser("no", "yes");
                                 break;
                             case "lizard":
                                 Console.WriteLine("Lizard clashes with lizard.");
-                                player.won = "tie";
-                                playerTwo.won = "tie";
+                                SetWinnerAndLoser("tie", "tie");
                                 break;
                             case "spock":
                                 Console.WriteLine("Lizard poisons Spock.");
-                                player.won = "yes";
-                                playerTwo.won = "no";
+                                SetWinnerAndLoser("yes", "no");
                                 break;
                         }
                         break;
@@ -186,42 +183,30 @@ namespace RockPaperScissorsLizardSpock
                         {
                             case "paper":
                                 Console.WriteLine("Paper disproves Spock.");
-                                player.won = "no";
-                                playerTwo.won = "yes";
+                                SetWinnerAndLoser("no", "yes");
                                 break;
                             case "rock":
                                 Console.WriteLine("Spock vaporizes rock.");
-                                player.won = "yes";
-                                playerTwo.won = "no";
+                                SetWinnerAndLoser("yes", "no");
                                 break;
                             case "scissors":
                                 Console.WriteLine("Spock smashes scissors.");
-                                player.won = "yes";
-                                playerTwo.won = "no";
+                                SetWinnerAndLoser("yes", "no");
                                 break;
                             case "lizard":
                                 Console.WriteLine("Lizard poisons Spock.");
-                                player.won = "no";
-                                playerTwo.won = "yes";
+                                SetWinnerAndLoser("no", "yes");
                                 break;
                             case "spock":
                                 Console.WriteLine("Spock clashes with Spock.");
-                                player.won = "tie";
-                                playerTwo.won = "tie";
+                                SetWinnerAndLoser("tie", "tie");
                                 break;
                         }
                         break;
                     }
             }
-            if (player.won == "yes")
-            {
-                player.score += 1;
-            }
-            else if (playerTwo.won == "yes")
-            {
-                playerTwo.score += 1;
-            }
-            Console.WriteLine("{0} score: {1}. {2} score: {3}", player.name, player.score, playerTwo.name, playerTwo.score);
+            AdjustScores();
+            DisplayScores();
         }
 
 
@@ -237,14 +222,15 @@ namespace RockPaperScissorsLizardSpock
         }
         public void Play()
         {
+            GameStart();
+            GetNames();
             player.playAgain = true;
-            GetNames();       
             while (player.playAgain)
             {
                 Console.WriteLine("Its {0} versus {1}!", player.name, playerTwo.name);
                 player.getChoice();
                 playerTwo.getChoice();
-                compareChoices();
+                CompareChoices();
                 gameEnd();
             }
         }
