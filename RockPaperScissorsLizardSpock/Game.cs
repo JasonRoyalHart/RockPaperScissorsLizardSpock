@@ -225,6 +225,16 @@ namespace RockPaperScissorsLizardSpock
         {
             Console.WriteLine("Its {0} versus {1}!", player.name, playerTwo.name);
         }
+
+        public void ClearScreen()
+        {
+            if (numPlayers == 2)
+            {
+                Console.WriteLine("Hit any key to clear the screen for the next player.");
+                Console.ReadKey();
+                Console.Clear();
+            }
+        }
         public void Play()
         {
             GameStart();
@@ -234,6 +244,7 @@ namespace RockPaperScissorsLizardSpock
             {
                 DisplayCompetitors();
                 player.getChoice();
+                ClearScreen();
                 playerTwo.getChoice();
                 CompareChoices();
                 gameEnd();
